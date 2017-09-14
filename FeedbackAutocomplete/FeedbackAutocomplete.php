@@ -94,7 +94,8 @@ class FeedbackAutocomplete extends LimeSurveyPlugin
             Answer::model()->insertRecords(array(
                 'qid' => $question->qid,
                 'code' => $code,
-                'answer' => $response[$otherColumn]
+                'answer' => $response[$otherColumn],
+                'sortorder' => 0
             ));
 
             $response[$selectColumn] = $code;
